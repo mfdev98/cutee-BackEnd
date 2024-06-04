@@ -8,15 +8,15 @@
 // Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
 // Va bu 21 soni arrayning taribidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
 
-function getHighestIndex(num) {
-   let max = 0;
-   let index = 0;
-   for (let i = 0; i < num.length; i++) {
-      if (max < num[i]) {
-         max = num[i];
-         index = i;
-      }
-   }
-   return console.log(index);
+function getHighestIndex(num: number[]) {
+    let max: number = 0;
+    let index: number = 0;
+    for (let i: number = 0; i < num.length; i++) {
+        if (max < num[i]) {
+            max = num[i];
+            index = i;
+        }
+    }
+    return console.log(index);
 }
 getHighestIndex([5, 21, 12, 21, 8]);
