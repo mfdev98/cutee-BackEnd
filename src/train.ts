@@ -11,8 +11,6 @@ function getDigits(str: string) {
 
 getDigits('m14i1t');
 
-
-
 // H-TASK:
 
 // shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib,
