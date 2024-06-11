@@ -1,4 +1,4 @@
-enum HttpCode {
+export enum HttpCode {
    OK = 200,
    CREATED = 201,
    NOT_MODIFIED = 304,
@@ -16,11 +16,11 @@ export enum Message {
    UPDATE_FAILED = "Update failed"
 }
 
-class Errors extends Error {
+export class Errors extends Error {
    public code: HttpCode;
    public message: Message;
 
-   constructor(statusCode: HttpCode, statusMessage: Message) {
+   constructor(statusCode: HttpCode, statusMessage: Message.CREATE_FAILED) {
       super();
       this.code = statusCode;
       this.message = statusMessage;
