@@ -20,9 +20,11 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 /** 4-ROUTERS **/
+
 // 1 SPA: REACT
 // 2 BSSR: EJS backendda froneendni togridan togri qurib olishda yordam bermoqda
-app.use('/admin', routerAdmin);  //EJS
-app.use('/', router);   // REACT (Middleware Design Pattern)  (kelayotgan requestlarni ruterga yuborishini belgilayabmiz)
+
+app.use('/admin', routerAdmin);  // Traditional dev FD => BSSR (Admin) => EJS
+app.use('/', router);   // Modern dev FD => SPA (User) => REACT (Middleware Design Pattern)  
 
 export default app;

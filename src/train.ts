@@ -1,30 +1,58 @@
+// J-TASK: 
+
+// Shunday function yozing, u string qabul qilsin va 
+// string ichidagi eng uzun sozni qaytarsin. MASALAN: 
+// findLongestWord("I come from Uzbekistan") 
+// return "Uzbekistan"
+
+function findLongestWord(str: string) {
+   let strArr: string[] = str.split(" ");
+   let maxLength: number = 0;
+   let maxStr: string = "";
+
+   for (let i = 0; i < strArr.length; i++) {
+      if (maxLength < strArr[i].length) {
+         maxLength = strArr.length;
+         maxStr = strArr[i];
+      }
+   }
+
+   console.log(maxStr);
+}
+
+findLongestWord("I come from Uzbekistan")
+
+console.log('==========');
+
 // I-TASK:
 
 // Shunday function yozing, u parametridagi array 
 // ichida eng kop takrorlangan raqamni topib qaytarsin.
 // MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
 
-function majorityElement(arr: number[]) {
-   let countA: number = 0;
-   let countB: number = 1;
-   let result: number = 0;
-   for (let a = 0; a < arr.length; a++) {
-      for (let b = 1; b < arr.length; b++) {
-         if (arr[a] === arr[b]) {
-            countB++;
-         }
-      }
-      if (countA <= countB) {
-         result = arr[a];
-         countA = countB;
-         countB = 1;
-      }
-   }
-   console.log(result);
-}
+// function majorityElement(arr: number[]) {
+//    let countA: number = 0;   
+//    let countB: number = 1;
+//    let result: number = 0;
+//    for (let a = 0; a < arr.length; a++) {
+//       for (let b = 1; b < arr.length; b++) {
+//          if (arr[a] === arr[b]) {
+//             countB++;
+//          }
+//       }
+//       if (countA <= countB) {
+//          result = arr[a];
+//          countA = countB;
+//          countB = 1;
+//       }
+//    }
+//    console.log(result);
+// }
 
 
-majorityElement([1, 2, 3, 4, 5, 4, 3, 4, 1, 1, 1]);
+// majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
+
+console.log('==========');
 
 // H2-TASK: 
 // Shunday function tuzing, unga string argument pass bolsin.
