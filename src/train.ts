@@ -1,23 +1,43 @@
+// L-TASK:
+
+// So'zlarni ketma - ketligini buzmasdan har bir so'zni
+// alohida teskarisiga o'girib beradigan fucntion tuzing.
+// Funtion yagona string qabul qilsin
+
+// MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc";
+// Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida teskarisiga o'girilmoqda
+
+function reverseSentence(str:string){
+   str=str.split(' ').map((word: string) => word.split('').reverse().join('')).join(' ');
+   console.log(str);
+}
+
+reverseSentence("we like coding!")
+
+
+
+console.log('==========');
+
 // K-TASK: 
 
 // Shunday function yozing, u string qabul qilsin va string ichidagi unli
 // harflar sonini qaytarsin. MASALAN: countVowels("string") return 1;
 
-function countVowels(str: string) {
-   let count: number = 0;
-   str = str.toLowerCase();
+// function countVowels(str: string) {
+//    let count: number = 0;
+//    str = str.toLowerCase();
 
-   for (let i: number = 0; i < str.length; i++) {
-      if (
-         str[i] === 'a' || str[i] === 'e' ||
-         str[i] === 'i' || str[i] === 'o' ||
-         str[i] === 'u' || str[i] === 'y'
-      ) { count++; }
-   }
-   console.log(count);
-}
+//    for (let i: number = 0; i < str.length; i++) {
+//       if (
+//          str[i] === 'a' || str[i] === 'e' ||
+//          str[i] === 'i' || str[i] === 'o' ||
+//          str[i] === 'u' || str[i] === 'y'
+//       ) { count++; }
+//    }
+//    console.log(count);
+// }
 
-countVowels("String");
+// countVowels("String");
 
 console.log('==========');
 
