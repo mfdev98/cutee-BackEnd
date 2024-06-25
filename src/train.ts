@@ -1,3 +1,18 @@
+// M-TASK:
+
+// Shunday function tuzing, u raqamlardan tashkil topgan array qabul qilsin
+// va array ichidagi har bir raqam uchun raqamning o'zi va hamda o'sha raqamni kvadratidan
+// tashkil topgan object hosil qilib, hosil bo'lgan objectlarni array ichida qaytarsin
+// MASALAN: getSquareNumbers([1, 2, 3]) 
+//return [{number: 1, square: 1}, number: 2, square: 4 }, { number: 3, square: 9 }];
+
+function getSquareNumbers(num: number[]) {
+}
+
+getSquareNumbers([1, 2, 3]);
+
+console.log('=====L-TASK=====');
+
 // L-TASK:
 
 // So'zlarni ketma - ketligini buzmasdan har bir so'zni
@@ -7,16 +22,14 @@
 // MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc";
 // Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida teskarisiga o'girilmoqda
 
-function reverseSentence(str:string){
-   str=str.split(' ').map((word: string) => word.split('').reverse().join('')).join(' ');
-   console.log(str);
-}
+// function reverseSentence(str:string){
+//    str=str.split(' ').map((word: string) => word.split('').reverse().join('')).join(' ');
+//    console.log(str);
+// }
 
-reverseSentence("we like coding!")
+// reverseSentence("we like coding!");
 
-
-
-console.log('==========');
+console.log('=====K-TASK=====');
 
 // K-TASK: 
 
@@ -39,7 +52,7 @@ console.log('==========');
 
 // countVowels("String");
 
-console.log('==========');
+console.log('=====J-TASK=====');
 
 // J-TASK: 
 
@@ -65,7 +78,7 @@ console.log('==========');
 
 // findLongestWord("I come from Uzbekistan");
 
-console.log('==========');
+console.log('=====I-TASK=====');
 
 // I-TASK:
 
@@ -95,7 +108,7 @@ console.log('==========');
 
 // majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
 
-console.log('==========');
+console.log('=====H2-TASK=====');
 
 // H2-TASK: 
 // Shunday function tuzing, unga string argument pass bolsin.
@@ -110,7 +123,7 @@ console.log('==========');
 
 // getDigits('m14i1t');
 
-console.log('==========');
+console.log('=====H-TASK=====');
 
 // H-TASK:
 
