@@ -5,12 +5,6 @@
             <div>PRODUCT PAGE</div>
             <div>I am <%=member.memberNick%>
             </div>
-
-            <%products.map((value, key)=> { %>
-                <p>
-                    <%= product.productName%> - <%= product.productSize %>
-                </p>
-                <%})%>
         </div>
     </body>
     <%- include("includes/footer.ejs")%>

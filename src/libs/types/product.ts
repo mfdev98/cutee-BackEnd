@@ -27,8 +27,22 @@ export interface ProductInput {
     productPrice: number;
     productLeftCount: number;
     productSize?: ProductSize;
-    productVolume?: number;
+    productVolume?: Number;
     productDesc?: string;
     productImages?: string[];
-    productViews?: number;
+    prproductViews?: number;
 }
+
+export interface ProductUpdateInput {
+    _id: ObjectId;
+    productStatus?: ProductStatus;
+    productCollection?: ProductCollection;
+    productName?: string;
+    productPrice?: number;
+    productLeftCount?: number;
+    productSize?: ProductSize;
+    productVolume?: Number;
+    productDesc?: string;
+    productImages?: string[];
+    prproductViews?: number;
+  }
