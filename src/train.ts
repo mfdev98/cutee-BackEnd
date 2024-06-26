@@ -7,6 +7,17 @@
 //return [{number: 1, square: 1}, number: 2, square: 4 }, { number: 3, square: 9 }];
 
 function getSquareNumbers(num: number[]) {
+    let result = [];
+
+    for (let i = 0; i < num.length; i++) {
+        let square = num[i] * num[i];
+        let obj = {
+            number: num[i],
+            square: square
+        };
+        result.push(obj);
+    }
+    console.log(result);
 }
 
 getSquareNumbers([1, 2, 3]);
