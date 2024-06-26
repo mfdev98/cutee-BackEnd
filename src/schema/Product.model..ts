@@ -4,12 +4,11 @@ import { ProductCollection, ProductSize, ProductStatus, ProductVolume } from "..
 
 const productSchema = new Schema(
    {
-      ProductStatus: {
+      productStatus: {
          type: String,
          enum: ProductStatus,
          default: ProductStatus.PAUSE,
       },
-
       productCollection: {
          type: String,
          enum: ProductCollection,
@@ -20,17 +19,14 @@ const productSchema = new Schema(
          type: String,
          required: true,
       },
-
       productPrice: {
          type: Number,
          required: true,
       },
-
       productLeftCount: {
          type: Number,
          required: true,
       },
-
       productSize: {
          type: String,
          enum: ProductSize,
@@ -38,7 +34,7 @@ const productSchema = new Schema(
       },
 
       productVolume: {
-         type: String,
+         type: Number,
          enum: ProductVolume,
          default: ProductVolume.ONE,
       },
@@ -50,18 +46,18 @@ const productSchema = new Schema(
 
       productImages: {
          type: [String],
-         default: []
+         default: [],
       },
+
       productViews: {
          type: Number,
          default: 0,
       },
    },
-   { timestamps: true } // updatedAt, createdAt
+   { timestamps: true } //updatedAt, createdAt
 );
-
 productSchema.index(
    { productName: 1, productSize: 1, productVolume: 1 },
    { unique: true }
 );
-export default mongoose.model('Product', productSchema);
+export default mongoose.model("Product", productSchema);
