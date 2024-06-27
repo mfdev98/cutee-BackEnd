@@ -1,13 +1,10 @@
 // N-TASK:
 
-// Parametr sifatida yagona string qabul qiladigan function tuzing.
-// Va bu function string'ni palindrom so'z yoki palindrom so'z emasligini aniqlab (boolean)
-// 'true' yokida 'false' qaytarsin.
-
-// MASALAN: palindromCheck("dad") return true; palindromCheck("son") return false;
-// Birinchi misolda 'dad' so'zini ikkala tarafdan o'qilganda ham bir xil ma'noni beradi (true)
-// Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermaydi (false)
-
+// Shunday function yozing, u string qabul qilsin va 
+// string palindrom yani togri oqilganda ham, orqasidan 
+// oqilganda ham bir hil oqiladigan soz ekanligini aniqlab 
+// boolean qiymat qaytarsin. MASALAN: palindromCheck("dad") 
+// return true;  palindromCheck("son") return false;
 
 function palindromCheck(s: string) {
     let reversed = s.split('').reverse().join('');
