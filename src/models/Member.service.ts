@@ -64,6 +64,7 @@ class MemberService {
          throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
       }
    }
+
    public async processLogin(input: LoginInput): Promise<Member> {
       const member = await this.memberModel
          .findOne(
@@ -82,6 +83,14 @@ class MemberService {
       }
 
       return await this.memberModel.findById(member._id).exec();
+   }
+
+   public async getUsers(): Promise<Member[]> {
+      const result = await this.memberModel
+         .find({ memberType: MemberType.USER })
+         .exec();
+      if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+      return result
    }
 }
 
