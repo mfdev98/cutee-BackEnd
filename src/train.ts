@@ -1,3 +1,29 @@
+// N-TASK:
+
+// Parametr sifatida yagona string qabul qiladigan function tuzing.
+// Va bu function string'ni palindrom so'z yoki palindrom so'z emasligini aniqlab (boolean)
+// 'true' yokida 'false' qaytarsin.
+
+// MASALAN: palindromCheck("dad") return true; palindromCheck("son") return false;
+// Birinchi misolda 'dad' so'zini ikkala tarafdan o'qilganda ham bir xil ma'noni beradi (true)
+// Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermaydi (false)
+
+
+function palindromCheck(s: string) {
+    let reversed = s.split('').reverse().join('');
+
+    if (s === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(palindromCheck("dad"));
+console.log(palindromCheck("son"));
+
+console.log('=====M-TASK=====');
+
 // M-TASK:
 
 // Shunday function tuzing, u raqamlardan tashkil topgan array qabul qilsin
@@ -6,21 +32,21 @@
 // MASALAN: getSquareNumbers([1, 2, 3]) 
 //return [{number: 1, square: 1}, number: 2, square: 4 }, { number: 3, square: 9 }];
 
-function getSquareNumbers(num: number[]) {
-    let result = [];
+// function getSquareNumbers(num: number[]) {
+//     let result = [];
 
-    for (let i = 0; i < num.length; i++) {
-        let square = num[i] * num[i];
-        let obj = {
-            number: num[i],
-            square: square
-        };
-        result.push(obj);
-    }
-    console.log(result);
-}
+//     for (let i = 0; i < num.length; i++) {
+//         let square = num[i] * num[i];
+//         let obj = {
+//             number: num[i],
+//             square: square
+//         };
+//         result.push(obj);
+//     }
+//     console.log(result);
+// }
 
-getSquareNumbers([1, 2, 3]);
+// getSquareNumbers([1, 2, 3]);
 
 console.log('=====L-TASK=====');
 
