@@ -6,10 +6,15 @@
 // calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
 
 function calculateSumOfNumbers(arr: any[]) {
-
+    let sum: number = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if ("number" == typeof arr[i])
+            sum += arr[i];
+    }
+    console.log(sum);
 }
 
-calculateSumOfNumbers([10, "10", { son: 10 }, true, 35])
+calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 
 console.log('=====N-TASK=====');
 

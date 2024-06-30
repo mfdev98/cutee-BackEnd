@@ -7,6 +7,7 @@ import { AdminRequest } from "../libs/types/member";
 
 const productService = new ProductService();
 const productController: T = {};
+
 /**SPA */
 
 
@@ -42,14 +43,14 @@ productController.createNewProducts = async (
       await productService.createNewProduct(data);
 
       res.send(
-         `<script> alert("Sucessful creation"); window.location.replace('admin/product/all') </script>`
+         `<script> alert("Sucessful creation"); window.location.replace('/admin/product/all') </script>`
       );
    } catch (err) {
       console.log("Error, createNewProducts", err);
       const message =
          err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
       res.send(
-         `<script> alert("${message}"); window.location.replace('admin/product/all') </script>`
+         `<script> alert("${message}"); window.location.replace('/admin/product/all') </script>`
       );
    }
 };

@@ -89,7 +89,7 @@ restaurantController.processLogin = async (
       const message =
          err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
       res.send(
-         `<script> alert("${message}"); window.location.replace('admin/login') </script>`
+         `<script> alert("${message}"); window.location.replace('/admin/login') </script>`
       );
    }
 };
@@ -160,7 +160,7 @@ restaurantController.verifyRestaurant = (
       next();
    } else {
       const message = Message.NOT_AUTHENTICATED
-      res.send(`<script> alert("${message}"); window.location.replace('admin/login');</script>`);
+      res.send(`<script> alert("${message}"); window.location.replace('/admin/login');</script>`);
    }
 };
 

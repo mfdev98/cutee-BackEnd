@@ -18,7 +18,9 @@ class MemberService {
 
       try {
          const result = await this.memberModel.create(input);
-         result.memberPasswor = "";
+         result.memberPassword = "";
+         console.log("Testresult: ", result.memberPassword);
+
          return result.toJSON();
       } catch (err) {
          console.error("Error, model:signup", err)
@@ -60,6 +62,7 @@ class MemberService {
 
       try {
          const result = await this.memberModel.create(input);
+         result.memberPassword = "";
          return result;
       } catch (err) {
          throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
