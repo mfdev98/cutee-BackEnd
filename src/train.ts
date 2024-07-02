@@ -1,3 +1,12 @@
+// P-TASK
+
+// Parametr sifatida yagona object qabul qiladigan function yozing.
+// Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+// MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+
+console.log('=====N-TASK=====');
+
 // O-TASK:
 
 // Shunday function yozing, u har xil valuelardan iborat 
@@ -5,16 +14,16 @@
 // hisoblab chiqqan javobni qaytarsin. MASALAN: 
 // calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
 
-function calculateSumOfNumbers(arr: any[]) {
-    let sum: number = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if ("number" == typeof arr[i])
-            sum += arr[i];
-    }
-    console.log(sum);
-}
+// function calculateSumOfNumbers(arr: any[]) {
+//     let sum: number = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if ("number" == typeof arr[i])
+//             sum += arr[i];
+//     }
+//     console.log(sum);
+// }
 
-calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+// calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 
 console.log('=====N-TASK=====');
 
