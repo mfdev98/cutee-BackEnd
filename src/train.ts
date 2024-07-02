@@ -1,9 +1,20 @@
 // P-TASK
 
-// Parametr sifatida yagona object qabul qiladigan function yozing.
-// Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
-
+// Shunday function yozing, u object qabul qilsin va 
+// arrayni object arrayga otkazib arrayni qaytarsin qaytarsin.
 // MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+
+const objectToArray = (obj: any) => {
+    let result = [];
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result.push([key, obj[key]]);
+        }
+    }
+    console.log(result);
+};
+
+objectToArray({ a: 10, b: 20 });
 
 console.log('=====N-TASK=====');
 
