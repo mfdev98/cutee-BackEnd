@@ -1,3 +1,32 @@
+console.log('=====S-TASK=====');
+
+// S-TASK:
+// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin 
+// va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+// MASALAN: missingNumber([3, 0, 1]) return 2
+
+function missingNumber(num: number[]) {
+    let min = 0, max = 0, missNum = [];
+
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] < min) {
+            min = num[i];
+        }
+        else if (num[i] > max) {
+            max = num[i];
+        }
+    }
+
+    for (let i = min; i <= max; i++) {
+        if (!num.includes(i)) {
+            missNum.push(i);
+        }
+    }
+    console.log(missNum);
+}
+
+missingNumber([3, 0, 10]);
+
 console.log('=====R-TASK=====');
 
 // R - TASK:
@@ -5,14 +34,14 @@ console.log('=====R-TASK=====');
 // String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini
 // number holatda qaytarsin.MASALAN: calculate("1+3") return 4;
 
-function calculate(str: string) {
-    const parts = str.split('+');
-    const numbers = parts.map(part => parseInt(part.trim(), 10));
-    const sum = numbers.reduce((acc, num) => acc + num, 0);
-    console.log(sum);
-}
+// function calculate(str: string) {
+//     const parts = str.split('+');
+//     const numbers = parts.map(part => parseInt(part.trim(), 10));
+//     const sum = numbers.reduce((acc, num) => acc + num, 0);
+//     console.log(sum);
+// }
 
-calculate("1+3");
+// calculate("1+3");
 
 console.log('=====Q-TASK=====');
 
