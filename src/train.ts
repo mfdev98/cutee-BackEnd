@@ -1,3 +1,39 @@
+console.log('=====T-TASK=====');
+
+// T-TASK:
+
+// Shunday function yozing, u sonlardan tashkil topgan 2 ta 
+// array qabul qilsin va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin
+// MASALAN: mergeSortedArrays([0,3,4,31], [4,6,30]); return [0,3,4,4,6,30,31]
+
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+    const mergedArray: number[] = [];
+    let i = 0;
+    let j = 0;
+    for (; i < arr1.length && j < arr2.length;) {
+        if (arr1[i] <= arr2[j]) {
+            mergedArray.push(arr1[i]);
+            i++;
+        } else {
+            mergedArray.push(arr2[j]);
+            j++;
+        }
+    }
+
+    for (; i < arr1.length; i++) {
+        mergedArray.push(arr1[i]);
+    }
+
+    for (; j < arr2.length; j++) {
+        mergedArray.push(arr2[j]);
+    }
+
+    return mergedArray;
+}
+
+const merged = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+console.log(merged); 
+
 console.log('=====S-TASK=====');
 
 // S-TASK:
@@ -5,27 +41,27 @@ console.log('=====S-TASK=====');
 // va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
 // MASALAN: missingNumber([3, 0, 1]) return 2
 
-function missingNumber(num: number[]) {
-    let min = 0, max = 0, missNum = [];
+// function missingNumber(num: number[]) {
+//     let min = 0, max = 0, missNum = [];
 
-    for (let i = 0; i < num.length; i++) {
-        if (num[i] < min) {
-            min = num[i];
-        }
-        else if (num[i] > max) {
-            max = num[i];
-        }
-    }
+//     for (let i = 0; i < num.length; i++) {
+//         if (num[i] < min) {
+//             min = num[i];
+//         }
+//         else if (num[i] > max) {
+//             max = num[i];
+//         }
+//     }
 
-    for (let i = min; i <= max; i++) {
-        if (!num.includes(i)) {
-            missNum.push(i);
-        }
-    }
-    console.log(missNum);
-}
+//     for (let i = min; i <= max; i++) {
+//         if (!num.includes(i)) {
+//             missNum.push(i);
+//         }
+//     }
+//     console.log(missNum);
+// }
 
-missingNumber([3, 0, 10]);
+// missingNumber([3, 0, 10]);
 
 console.log('=====R-TASK=====');
 
