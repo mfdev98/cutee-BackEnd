@@ -1,3 +1,21 @@
+console.log('=====U-TASK=====');
+
+// U-TASK:
+
+// Shunday function yozing, uni number parametri bolsin va 0 dan berilgan 
+// parametrgacha bolgan oraliqdagi faqat toq sonlar nechtaligini return qilsin
+// MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
+
+function sumOdds(num: number) {
+    let count = 0;
+    for (let i = 1; i < num; i += 2) {
+        count++;
+    }
+    console.log(count);
+}
+
+sumOdds(9);
+
 console.log('=====T-TASK=====');
 
 // T-TASK:
@@ -6,33 +24,33 @@ console.log('=====T-TASK=====');
 // array qabul qilsin va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin
 // MASALAN: mergeSortedArrays([0,3,4,31], [4,6,30]); return [0,3,4,4,6,30,31]
 
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-    const mergedArray: number[] = [];
-    let i = 0;
-    let j = 0;
-    for (; i < arr1.length && j < arr2.length;) {
-        if (arr1[i] <= arr2[j]) {
-            mergedArray.push(arr1[i]);
-            i++;
-        } else {
-            mergedArray.push(arr2[j]);
-            j++;
-        }
-    }
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//     const mergedArray: number[] = [];
+//     let i = 0;
+//     let j = 0;
+//     for (; i < arr1.length && j < arr2.length;) {
+//         if (arr1[i] <= arr2[j]) {
+//             mergedArray.push(arr1[i]);
+//             i++;
+//         } else {
+//             mergedArray.push(arr2[j]);
+//             j++;
+//         }
+//     }
 
-    for (; i < arr1.length; i++) {
-        mergedArray.push(arr1[i]);
-    }
+//     for (; i < arr1.length; i++) {
+//         mergedArray.push(arr1[i]);
+//     }
 
-    for (; j < arr2.length; j++) {
-        mergedArray.push(arr2[j]);
-    }
+//     for (; j < arr2.length; j++) {
+//         mergedArray.push(arr2[j]);
+//     }
 
-    return mergedArray;
-}
+//     return mergedArray;
+// }
 
-const merged = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
-console.log(merged); 
+// const merged = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+// console.log(merged);
 
 console.log('=====S-TASK=====');
 
