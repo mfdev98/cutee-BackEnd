@@ -6,19 +6,17 @@ console.log('=====W-TASK=====');
 // Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
 // MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]
 
-function chunkArray(arr: number[], num: number) {
-   let result = [];
-   let i = 0;
-   let c = 0;
-   for (let a = 1; a <= arr.length; a++) { // 0..9
-      for (let b = i; b < c; b++) {
-         console.log("arr:", arr[b]);
-      }
-      console.log("----------");
-   }
-}
+function chunkArray(arr: number[], size: number) {
+   const chunkedArray: number[][] = [];
+   let index = 0;
 
-// console.log(result);
+   while (index < arr.length) {
+      chunkedArray.push(arr.slice(index, index + size));
+      index += size;
+   }
+
+   console.log(chunkedArray);
+}
 
 chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
 
