@@ -1,3 +1,28 @@
+console.log('=====W-TASK=====');
+
+// W-TASK:
+
+// Shunday function yozing, uni array va number parametrlari bolsin. 
+// Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
+// MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]
+
+function chunkArray(arr: number[], num: number) {
+   let result = [];
+   let i = 0;
+   let c = 0;
+   for (let a = 1; a <= arr.length; a++) { // 0..9
+      for (let b = i; b < c; b++) {
+         console.log("arr:", arr[b]);
+      }
+      console.log("----------");
+   }
+}
+
+// console.log(result);
+
+chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+
+
 console.log('=====V-TASK=====');
 
 // V-TASK:
@@ -6,19 +31,19 @@ console.log('=====V-TASK=====');
 // harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
 // MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
 
-function countChars(str: string) {
-   let charCount: { [char: string]: number; } = {};
-   for (let char of str) {
-      if (charCount[char]) {
-         charCount[char]++;
-      } else {
-         charCount[char] = 1;
-      }
-   }
-   console.log(charCount);
-}
+// function countChars(str: string) {
+//    let charCount: { [char: string]: number; } = {};
+//    for (let char of str) {
+//       if (charCount[char]) {
+//          charCount[char]++;
+//       } else {
+//          charCount[char] = 1;
+//       }
+//    }
+//    console.log(charCount);
+// }
 
-countChars("hello");
+// countChars("hello");
 
 console.log('=====U-TASK=====');
 
