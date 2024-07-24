@@ -52,8 +52,6 @@ productController.getProduct = async (req: ExtendedRequest, res: Response) => {
    }
 };
 
-
-
 /**SSR */
 
 productController.getAllProducts = async (req: Request, res: Response) => {
