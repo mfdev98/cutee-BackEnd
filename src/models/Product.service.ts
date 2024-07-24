@@ -9,6 +9,7 @@ import {
 } from "../libs/types/product";
 import ProductModel from "../schema/Product.model.";
 import { ProductStatus } from "../libs/enums/product.enum";
+import { ObjectId } from "mongoose";
 
 
 class ProductService {
@@ -44,10 +45,24 @@ class ProductService {
 
       if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
 
-
-
       return result;
+   }
 
+   public async getProduct(
+      memberId: ObjectId | null,
+      id: string
+   ): Promise<Product> {
+      const productId = shapeIntoMongooseObjecId(id);
+      let result = await this.productModel
+         .findOne({
+            _id: productId,
+            productStatus: ProductStatus.PROCESS
+         })
+         .exec();
+      if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+      //TODO: if authenticated users => first => view log creation
+      return result;
    }
 
    /**SSR */
