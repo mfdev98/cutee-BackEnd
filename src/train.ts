@@ -1,3 +1,17 @@
+console.log('=====Y-TASK=====');
+
+// Y-TASK:
+
+//  Shunday function yozing, uni 2 ta array parapetri bolsin. 
+//  Function ikkala arrayda ham ishtirok etgan qiymatlarni bir 
+//  arrayda qaytarsin MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+function findIntersection(arr1: number[], arr2: number[]) {
+   console.log(arr1.filter(value => arr2.includes(value)));
+}
+
+findIntersection([1, 2, 3], [3, 2, 0]);
+
 console.log('=====X-TASK=====');
 
 // X-TASK:
@@ -8,23 +22,23 @@ console.log('=====X-TASK=====');
 //  countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') 
 //  return 2
 
-function countOccurrences(obj: any, key: string): number {
-   let count = 0;
+// function countOccurrences(obj: any, key: string): number {
+//    let count = 0;
 
-   if (obj[key] !== undefined) {
-      count++;
-   }
+//    if (obj[key] !== undefined) {
+//       count++;
+//    }
 
-   for (const prop in obj) {
-      if (typeof obj[prop] === 'object') {
-         count += countOccurrences(obj[prop], key);
-      }
-   }
+//    for (const prop in obj) {
+//       if (typeof obj[prop] === 'object') {
+//          count += countOccurrences(obj[prop], key);
+//       }
+//    }
 
-   return count;
-}
+//    return count;
+// }
 
-console.log(countOccurrences({ model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } }, 'model'));
+// console.log(countOccurrences({ model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } }, 'model'));
 
 console.log('=====W-TASK=====');
 
