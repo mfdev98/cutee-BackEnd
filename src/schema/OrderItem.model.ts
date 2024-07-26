@@ -1,25 +1,28 @@
 import mongoose, { Schema } from "mongoose";
 
-const orderItemSchema = new Schema({
-   itemQuantity: {
+const orderItemSchema = new Schema(
+  {
+    itemQuantity: {
       type: Number,
-      required: true
-   },
-   itemPrice: {
+      required: true,
+    },
+
+    itemPrice: {
       type: Number,
-      required: true
-   },
-   orderId: {
+      required: true,
+    },
+
+    orderId: {
       type: Schema.Types.ObjectId,
-      ref: "Order"
-   },
+      ref: "Order",
+    },
 
-   productId: {
+    productId: {
       type: Schema.Types.ObjectId,
-      ref: "Product"
-   }
-
-
-}, { timestamps: true, collection: "orderItems" } //updatedAt, createdAt;
+      ref: "Product",
+    },
+  },
+  { timestamps: true, collection: "orderItems" }
 );
+
 export default mongoose.model("OrderItem", orderItemSchema);
