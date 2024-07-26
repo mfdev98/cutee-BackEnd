@@ -1,3 +1,21 @@
+console.log('=====Z-TASK=====');
+
+// Z-TASK:
+// Shunday function yozing, uni sonlardan tashkil topgan array 
+// qabul qilsin. Function arraydagi juft sonlarni yigindisini 
+// qaytarsin MASALAN: sumEvens([1,2,3]) return 2
+
+function sumEvens(numbers: number[]) {
+   let sum = 0;
+   for (let number of numbers) {
+       if (number % 2 === 0) {
+           sum += number;
+       }
+   }
+   console.log(sum);
+}
+sumEvens([1,2,3]);
+
 console.log('=====Y-TASK=====');
 
 // Y-TASK:
@@ -6,11 +24,11 @@ console.log('=====Y-TASK=====');
 //  Function ikkala arrayda ham ishtirok etgan qiymatlarni bir 
 //  arrayda qaytarsin MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
 
-function findIntersection(arr1: number[], arr2: number[]) {
-   console.log(arr1.filter(value => arr2.includes(value)));
-}
+// function findIntersection(arr1: number[], arr2: number[]) {
+//    console.log(arr1.filter(value => arr2.includes(value)));
+// }
 
-findIntersection([1, 2, 3], [3, 2, 0]);
+// findIntersection([1, 2, 3], [3, 2, 0]);
 
 console.log('=====X-TASK=====');
 

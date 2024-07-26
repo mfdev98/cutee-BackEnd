@@ -1,18 +1,22 @@
 import { Member } from "../libs/types/member";
 import OrderModel from "../schema/Order.model";
 import OrderItemModel from "../schema/OrderItem.model";
-import { Order, OrderInquiry, OrderItemInput } from "../libs/types/order";
+import { Order, OrderInquiry, OrderItemInput, OrderUpdateInput } from "../libs/types/order";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { shapeIntoMongooseObjecId } from "../libs/config";
 import { ObjectId } from "mongoose";
+import MemberService from "./Member.service";
+import { OrderStatus } from "../libs/enums/order.enum";
 
 class OrderService {
    private readonly orderModel;
    private readonly orderItemModel;
+   private readonly memberService;
 
    constructor() {
       this.orderModel = OrderModel;
       this.orderItemModel = OrderItemModel;
+      this.memberService = new MemberService();
    }
 
    public async createOrder(member: Member, input: OrderItemInput[])
@@ -92,6 +96,34 @@ class OrderService {
          throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
       return result;
    }
+
+   public async updateOrder(member: Member, input: OrderUpdateInput)
+    : Promise<Order | any> {
+        const memberId = shapeIntoMongooseObjecId(member._id);
+        const orderId = shapeIntoMongooseObjecId(input.orderId)
+        const orderStatus = input.orderStatus;
+
+        const result = await this.orderModel
+            .findByIdAndUpdate(
+                {
+                    memberId: memberId,
+                    _id: orderId,
+                },
+                { orderStatus: orderStatus},
+                { new: true}
+            ).exec();
+
+            if(!result)
+                throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
+
+            if(orderStatus === OrderStatus.PROCESS) {
+                await this.memberService.addUserPoint(member, 1);
+            }
+
+            return result;
+
+    }
+
 
 }
 
