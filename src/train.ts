@@ -1,27 +1,42 @@
-console.log('=====Z-TASK=====');
+console.log("=====ZB-TASK=====");
+
+// ZB-TASK:
+
+// Shunday function yozing, uni 2 ta number parametri bolsin va berilgan
+// sonlar orasidan random raqam return qilsin MASALAN: randomBetween(30, 50)
+// return 45
+
+function randomBetween(min: number, max: number) {
+  const result = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(result);
+}
+
+randomBetween(30, 50);
+
+console.log("=====Z-TASK=====");
 
 // Z-TASK:
-// Shunday function yozing, uni sonlardan tashkil topgan array 
-// qabul qilsin. Function arraydagi juft sonlarni yigindisini 
+// Shunday function yozing, uni sonlardan tashkil topgan array
+// qabul qilsin. Function arraydagi juft sonlarni yigindisini
 // qaytarsin MASALAN: sumEvens([1,2,3]) return 2
 
-function sumEvens(numbers: number[]) {
-   let sum = 0;
-   for (let number of numbers) {
-       if (number % 2 === 0) {
-           sum += number;
-       }
-   }
-   console.log(sum);
-}
-sumEvens([1,2,3]);
+// function sumEvens(numbers: number[]) {
+//    let sum = 0;
+//    for (let number of numbers) {
+//        if (number % 2 === 0) {
+//            sum += number;
+//        }
+//    }
+//    console.log(sum);
+// }
+// sumEvens([1,2,3]);
 
-console.log('=====Y-TASK=====');
+console.log("=====Y-TASK=====");
 
 // Y-TASK:
 
-//  Shunday function yozing, uni 2 ta array parapetri bolsin. 
-//  Function ikkala arrayda ham ishtirok etgan qiymatlarni bir 
+//  Shunday function yozing, uni 2 ta array parapetri bolsin.
+//  Function ikkala arrayda ham ishtirok etgan qiymatlarni bir
 //  arrayda qaytarsin MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
 
 // function findIntersection(arr1: number[], arr2: number[]) {
@@ -30,14 +45,14 @@ console.log('=====Y-TASK=====');
 
 // findIntersection([1, 2, 3], [3, 2, 0]);
 
-console.log('=====X-TASK=====');
+console.log("=====X-TASK=====");
 
 // X-TASK:
 
-//  Shunday function yozing, uni object va string parapetrlari bolsin. 
-//  Function string parametri object ichida necha marotaba takrorlanganligini 
-//  qaytarsin (nested object bolsa ham sanasin) MASALAN: 
-//  countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') 
+//  Shunday function yozing, uni object va string parapetrlari bolsin.
+//  Function string parametri object ichida necha marotaba takrorlanganligini
+//  qaytarsin (nested object bolsa ham sanasin) MASALAN:
+//  countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model')
 //  return 2
 
 // function countOccurrences(obj: any, key: string): number {
@@ -58,11 +73,11 @@ console.log('=====X-TASK=====');
 
 // console.log(countOccurrences({ model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } }, 'model'));
 
-console.log('=====W-TASK=====');
+console.log("=====W-TASK=====");
 
 // W-TASK:
 
-// Shunday function yozing, uni array va number parametrlari bolsin. 
+// Shunday function yozing, uni array va number parametrlari bolsin.
 // Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
 // MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]
 
@@ -80,12 +95,11 @@ console.log('=====W-TASK=====');
 
 // chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
 
-
-console.log('=====V-TASK=====');
+console.log("=====V-TASK=====");
 
 // V-TASK:
 
-// Shunday function yozing, uni string parametri bolsin va stringdagi 
+// Shunday function yozing, uni string parametri bolsin va stringdagi
 // harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
 // MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
 
@@ -103,11 +117,11 @@ console.log('=====V-TASK=====');
 
 // countChars("hello");
 
-console.log('=====U-TASK=====');
+console.log("=====U-TASK=====");
 
 // U-TASK:
 
-// Shunday function yozing, uni number parametri bolsin va 0 dan berilgan 
+// Shunday function yozing, uni number parametri bolsin va 0 dan berilgan
 // parametrgacha bolgan oraliqdagi faqat toq sonlar nechtaligini return qilsin
 // MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
 
@@ -121,11 +135,11 @@ console.log('=====U-TASK=====');
 
 // sumOdds(9);
 
-console.log('=====T-TASK=====');
+console.log("=====T-TASK=====");
 
 // T-TASK:
 
-// Shunday function yozing, u sonlardan tashkil topgan 2 ta 
+// Shunday function yozing, u sonlardan tashkil topgan 2 ta
 // array qabul qilsin va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin
 // MASALAN: mergeSortedArrays([0,3,4,31], [4,6,30]); return [0,3,4,4,6,30,31]
 
@@ -157,10 +171,10 @@ console.log('=====T-TASK=====');
 // const merged = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
 // console.log(merged);
 
-console.log('=====S-TASK=====');
+console.log("=====S-TASK=====");
 
 // S-TASK:
-// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin 
+// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin
 // va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
 // MASALAN: missingNumber([3, 0, 1]) return 2
 
@@ -186,7 +200,7 @@ console.log('=====S-TASK=====');
 
 // missingNumber([3, 0, 10]);
 
-console.log('=====R-TASK=====');
+console.log("=====R-TASK=====");
 
 // R - TASK:
 // Shunday function yozing, u string parametrga ega bolsin.
@@ -202,12 +216,12 @@ console.log('=====R-TASK=====');
 
 // calculate("1+3");
 
-console.log('=====Q-TASK=====');
+console.log("=====Q-TASK=====");
 
 // Q-TASK
-// Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object, 
-// ikkinchisi string. Agar string parametr objectni propertysi bolsa true 
-// bolmasa false qaytarsin.MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") 
+// Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object,
+// ikkinchisi string. Agar string parametr objectni propertysi bolsa true
+// bolmasa false qaytarsin.MASALAN: hasProperty({name: "BMW", model: "M3"}, "model")
 // return true; hasProperty({name: "BMW", model: "M3"}, "year") return false
 
 // function hasProperty(obj: object, key: string): boolean {
@@ -216,11 +230,11 @@ console.log('=====Q-TASK=====');
 // console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
 // console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
 
-console.log('=====P-TASK=====');
+console.log("=====P-TASK=====");
 
 // P-TASK
 
-// Shunday function yozing, u object qabul qilsin va 
+// Shunday function yozing, u object qabul qilsin va
 // arrayni object arrayga otkazib arrayni qaytarsin qaytarsin.
 // MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
 
@@ -240,9 +254,9 @@ console.log('=====P-TASK=====');
 
 // O-TASK:
 
-// Shunday function yozing, u har xil valuelardan iborat 
-// array qabul qilsin va array ichidagi sonlar yigindisini 
-// hisoblab chiqqan javobni qaytarsin. MASALAN: 
+// Shunday function yozing, u har xil valuelardan iborat
+// array qabul qilsin va array ichidagi sonlar yigindisini
+// hisoblab chiqqan javobni qaytarsin. MASALAN:
 // calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
 
 // function calculateSumOfNumbers(arr: any[]) {
@@ -256,14 +270,14 @@ console.log('=====P-TASK=====');
 
 // calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 
-console.log('=====N-TASK=====');
+console.log("=====N-TASK=====");
 
 // N-TASK:
 
-// Shunday function yozing, u string qabul qilsin va 
-// string palindrom yani togri oqilganda ham, orqasidan 
-// oqilganda ham bir hil oqiladigan soz ekanligini aniqlab 
-// boolean qiymat qaytarsin. MASALAN: palindromCheck("dad") 
+// Shunday function yozing, u string qabul qilsin va
+// string palindrom yani togri oqilganda ham, orqasidan
+// oqilganda ham bir hil oqiladigan soz ekanligini aniqlab
+// boolean qiymat qaytarsin. MASALAN: palindromCheck("dad")
 // return true;  palindromCheck("son") return false;
 
 // function palindromCheck(s: string) {
@@ -279,14 +293,14 @@ console.log('=====N-TASK=====');
 // console.log(palindromCheck("dad"));
 // console.log(palindromCheck("son"));
 
-console.log('=====M-TASK=====');
+console.log("=====M-TASK=====");
 
 // M-TASK:
 
 // Shunday function tuzing, u raqamlardan tashkil topgan array qabul qilsin
 // va array ichidagi har bir raqam uchun raqamning o'zi va hamda o'sha raqamni kvadratidan
 // tashkil topgan object hosil qilib, hosil bo'lgan objectlarni array ichida qaytarsin
-// MASALAN: getSquareNumbers([1, 2, 3]) 
+// MASALAN: getSquareNumbers([1, 2, 3])
 //return [{number: 1, square: 1}, number: 2, square: 4 }, { number: 3, square: 9 }];
 
 // function getSquareNumbers(num: number[]) {
@@ -305,7 +319,7 @@ console.log('=====M-TASK=====');
 
 // getSquareNumbers([1, 2, 3]);
 
-console.log('=====L-TASK=====');
+console.log("=====L-TASK=====");
 
 // L-TASK:
 
@@ -323,9 +337,9 @@ console.log('=====L-TASK=====');
 
 // reverseSentence("we like coding!");
 
-console.log('=====K-TASK=====');
+console.log("=====K-TASK=====");
 
-// K-TASK: 
+// K-TASK:
 
 // Shunday function yozing, u string qabul qilsin va string ichidagi unli
 // harflar sonini qaytarsin. MASALAN: countVowels("string") return 1;
@@ -346,13 +360,13 @@ console.log('=====K-TASK=====');
 
 // countVowels("String");
 
-console.log('=====J-TASK=====');
+console.log("=====J-TASK=====");
 
-// J-TASK: 
+// J-TASK:
 
-// Shunday function yozing, u string qabul qilsin va 
-// string ichidagi eng uzun sozni qaytarsin. MASALAN: 
-// findLongestWord("I come from Uzbekistan") 
+// Shunday function yozing, u string qabul qilsin va
+// string ichidagi eng uzun sozni qaytarsin. MASALAN:
+// findLongestWord("I come from Uzbekistan")
 // return "Uzbekistan"
 
 // function findLongestWord(str: string) {
@@ -372,16 +386,16 @@ console.log('=====J-TASK=====');
 
 // findLongestWord("I come from Uzbekistan");
 
-console.log('=====I-TASK=====');
+console.log("=====I-TASK=====");
 
 // I-TASK:
 
-// Shunday function yozing, u parametridagi array 
+// Shunday function yozing, u parametridagi array
 // ichida eng kop takrorlangan raqamni topib qaytarsin.
 // MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
 
 // function majorityElement(arr: number[]) {
-//    let countA: number = 0;   
+//    let countA: number = 0;
 //    let countB: number = 1;
 //    let result: number = 0;
 //    for (let a = 0; a < arr.length; a++) {
@@ -399,12 +413,11 @@ console.log('=====I-TASK=====');
 //    console.log(result);
 // }
 
-
 // majorityElement([1, 2, 3, 4, 5, 4, 3, 4]);
 
-console.log('=====H2-TASK=====');
+console.log("=====H2-TASK=====");
 
-// H2-TASK: 
+// H2-TASK:
 // Shunday function tuzing, unga string argument pass bolsin.
 // Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 // MASALAN: getDigits("m14i1t") return qiladi "141"
@@ -417,7 +430,7 @@ console.log('=====H2-TASK=====');
 
 // getDigits('m14i1t');
 
-console.log('=====H-TASK=====');
+console.log("=====H-TASK=====");
 
 // H-TASK:
 
@@ -435,11 +448,6 @@ console.log('=====H-TASK=====');
 //    return console.log(p);
 // }
 // getPositive([1, -4, 2, 0, 3]);
-
-
-
-
-
 
 // G-TASK
 
