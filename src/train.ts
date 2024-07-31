@@ -1,3 +1,17 @@
+console.log("=====ZC-TASK=====");
+
+// ZC-TASK:
+
+// Shunday function yozing, uni number parametri bolsin va function
+// qabul parametrni selsiy miqdori sifatida qabul qilib uni farenhitga
+// ozgartirib bersin MASALAN: celsiusToFahrenheit(0) return 32
+
+function celsiusToFahrenheit(celsius: number) {
+  console.log((celsius * 9) / 5 + 32);
+}
+
+celsiusToFahrenheit(0);
+
 console.log("=====ZB-TASK=====");
 
 // ZB-TASK:
@@ -6,12 +20,12 @@ console.log("=====ZB-TASK=====");
 // sonlar orasidan random raqam return qilsin MASALAN: randomBetween(30, 50)
 // return 45
 
-function randomBetween(min: number, max: number) {
-  const result = Math.floor(Math.random() * (max - min + 1)) + min;
-  console.log(result);
-}
+// function randomBetween(min: number, max: number) {
+//   const result = Math.floor(Math.random() * (max - min + 1)) + min;
+//   console.log(result);
+// }
 
-randomBetween(30, 50);
+// randomBetween(30, 50);
 
 console.log("=====Z-TASK=====");
 
