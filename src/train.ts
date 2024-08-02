@@ -1,3 +1,27 @@
+console.log("=====ZD-TASK=====");
+
+// ZD-TASK:
+
+// Shunday function yozing, uni number, array va number parametrlari bolsin
+// va berilgan 1 - parametr numberga teng indexni array ichidan topib 3 -
+// parametrdagi raqam bilan almashtirib yangilangan arrayni qaytarsin
+// MASALAN: changeNumberInArray(1, [1,3,7,2], 2) return [1,2,7,2]
+
+function changeNumberInArray(
+  index: number,
+  arr: number[],
+  newValue: number
+): number[] {
+  const newArr = [...arr];
+  if (index >= 0 && index < newArr.length) {
+    newArr.splice(index, 1, newValue);
+  }
+  return newArr;
+}
+
+const result = changeNumberInArray(1, [1, 3, 7, 2], 2);
+console.log(result);
+
 console.log("=====ZC-TASK=====");
 
 // ZC-TASK:
@@ -5,12 +29,11 @@ console.log("=====ZC-TASK=====");
 // Shunday function yozing, uni number parametri bolsin va function
 // qabul parametrni selsiy miqdori sifatida qabul qilib uni farenhitga
 // ozgartirib bersin MASALAN: celsiusToFahrenheit(0) return 32
+// function celsiusToFahrenheit(celsius: number) {
+//   console.log((celsius * 9) / 5 + 32);
+// }
 
-function celsiusToFahrenheit(celsius: number) {
-  console.log((celsius * 9) / 5 + 32);
-}
-
-celsiusToFahrenheit(0);
+// celsiusToFahrenheit(0);
 
 console.log("=====ZB-TASK=====");
 
