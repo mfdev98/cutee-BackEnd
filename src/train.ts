@@ -1,3 +1,19 @@
+console.log("=====ZE-TASK=====");
+
+// ZE-TASK:
+
+// Shunday function yozing, uni  string parametri bolsin.String ichida
+// takrorlangan harflarni olib tashlab qolganini qaytarsin
+// MASALAN: removeDuplicate('stringg') return 'string'
+
+function removeDuplicate(str: string) {
+  const str2 = new Set(str);
+
+  console.log(Array.from(str2).join(""));
+}
+
+removeDuplicate("stringg"); 
+
 console.log("=====ZD-TASK=====");
 
 // ZD-TASK:
@@ -7,20 +23,20 @@ console.log("=====ZD-TASK=====");
 // parametrdagi raqam bilan almashtirib yangilangan arrayni qaytarsin
 // MASALAN: changeNumberInArray(1, [1,3,7,2], 2) return [1,2,7,2]
 
-function changeNumberInArray(
-  index: number,
-  arr: number[],
-  newValue: number
-): number[] {
-  const newArr = [...arr];
-  if (index >= 0 && index < newArr.length) {
-    newArr.splice(index, 1, newValue);
-  }
-  return newArr;
-}
+// function changeNumberInArray(
+//   index: number,
+//   arr: number[],
+//   newValue: number
+// ): number[] {
+//   const newArr = [...arr];
+//   if (index >= 0 && index < newArr.length) {
+//     newArr.splice(index, 1, newValue);
+//   }
+//   return newArr;
+// }
 
-const result = changeNumberInArray(1, [1, 3, 7, 2], 2);
-console.log(result);
+// const result = changeNumberInArray(1, [1, 3, 7, 2], 2);
+// console.log(result);
 
 console.log("=====ZC-TASK=====");
 

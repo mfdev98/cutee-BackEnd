@@ -77,7 +77,7 @@ class ProductService {
 
          console.log("exist:", existView);
          if (!existView) {
-            // Insert View 
+            // Insert View *
             await this.viewService.insertMemberView(input);
 
             // Increase Counts
