@@ -1,5 +1,17 @@
 console.log("=====ZF-TASK=====");
 
+// ZG - TASK:
+
+// Shunday function yozing, u berilgan string parametrni snake casega otkazib qaytarsin.
+// MASALAN: capitalizeWords('name should be a string') return 'name_should_be_a_string'
+
+function capitalizeWords(str: string) {
+  console.log(str.toLowerCase().replace(/\s+/g, "_"));
+}
+capitalizeWords("name should be a string");
+
+console.log("=====ZF-TASK=====");
+
 // ZF-TASK:
 
 // Shunday function yozing, uni string parametri bolsin.String ichidagi har bir
@@ -7,18 +19,18 @@ console.log("=====ZF-TASK=====");
 // sozlarni esa oz holicha qoldirsin.MASALAN: capitalizeWords('name should be a string')
 // return 'Name Should be a String'
 
-function capitalizeWords(str: string): void {
-  console.log(
-    str
-      .split(" ")
-      .map((word) =>
-        word.length > 2 ? word[0].toUpperCase() + word.slice(1) : word
-      )
-      .join(" ")
-  );
-}
+// function capitalizeWords(str: string): void {
+//   console.log(
+//     str
+//       .split(" ")
+//       .map((word) =>
+//         word.length > 2 ? word[0].toUpperCase() + word.slice(1) : word
+//       )
+//       .join(" ")
+//   );
+// }
 
-capitalizeWords("name should be a string");
+// capitalizeWords("name should be a string");
 
 console.log("=====ZE-TASK=====");
 
