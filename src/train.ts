@@ -1,23 +1,41 @@
+console.log("=====ZI-TASK=====");
+
+// ZI-TASK:
+
+// Shunday function yozing, u function ishga tushgandan 3 soniyadan keyin "Hello World"
+// ni qaytarsin. MASALAN: delayHelloWorld("Hello World") return "Hello World"
+
+function delayHelloWorld(str: string) {
+  setTimeout(() => {
+    console.log(str);
+  }, 3000);
+}
+
+delayHelloWorld("Hello World");
+
 console.log("=====ZH-TASK=====");
+
 // ZH-TASK:
 
 // Shunday function yozing, u berilgan array parametrni ichidagi eng katta
 // raqamgacha tushib qolgan raqamlarni bir arrayda qaytarsin.
 // MASALAN: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
 
-function findDisappearedNumbers(num: number[]) {
-  const max = Math.max(...num);
-  const result: number[] = [];
+// function findDisappearedNumbers(num: number[]) {
+//   const max = Math.max(...num);
+//   const result: number[] = [];
+//   let a = [...num];
+//   console.log("a:",a);
 
-  for (let i = 1; i <= max; i++) {
-    if (!num.includes(i)) {
-      result.push(i);
-    }
-  }
-  console.log(result);
-}
+//   for (let i = 1; i <= max; i++) {
+//     if (!num.includes(i)) {
+//       result.push(i);
+//     }
+//   }
+//   console.log(result);
+// }
 
-findDisappearedNumbers([1, 3, 4, 7]);
+// findDisappearedNumbers([1, 3, 4, 7]);
 
 console.log("=====ZG-TASK=====");
 
